@@ -1,5 +1,6 @@
 # !/bin/sh
-cd my_fangs
-. "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
+echo $(dirname "$0")
+. "$(dirname "$0")/_/husky.sh"
+cd ./my_fangs
+npm lint-staged
