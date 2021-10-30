@@ -1,41 +1,12 @@
 import React from "react";
 import logo from "../../assets/icons/myFangsIcon.svg";
-import styled, {keyframes} from "styled-components";
+import { StyledWelcomeScreen, StyledWelcomeScreenHeader, StyledWelcomeScreenLogo, StyledLink  } from "./WelcomeScreenStyled"
 
-const rotate = keyframes`
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-`;
+function handleDetection(event: any) {
+  console.log('change');
+  console.log(event.target);
 
-const StyledWelcomeScreen = styled.div`
-  text-align: center;
-`;
-const StyledWelcomeScreenHeader = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`;
-const StyledWelcomeScreenLogo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-  fill: #fff;
-  animation: ${rotate} infinite 20s linear;
-`;
-
-const StyledHeader = styled.h1``;
-const StyledParagraph = styled.p``;
-const StyledLink = styled.a`
-  color: #61dafb;
-`;
+}
 
 const WelcomeScreen = (props: any) => {
   return (
@@ -44,7 +15,7 @@ const WelcomeScreen = (props: any) => {
         <StyledWelcomeScreenLogo src={logo} alt="logo" />
         <h1>My Fangs</h1>
         <p>tarantulas dairy</p>
-        <StyledLink href="#" target="_blank" rel="noopener noreferrer">
+        <StyledLink to="/dashboard">
           Dashboard
         </StyledLink>
       </StyledWelcomeScreenHeader>
