@@ -28,7 +28,7 @@
     "lint": "eslint src",
     "prettier:fix": "prettier --write",
     "prettier:check": "prettier --check .",
-    "prepare": "cd .. && husky install my_fangs/.husky"
+    "prepare": "cd ../ && husky install ./my_fangs/.husky"
   },
   "eslintConfig": {
     "extends": [
@@ -55,9 +55,10 @@
     "prettier": "^2.4.1"
   },
   "lint-staged": {
-    "src/*.{ts,tsx}": [
-      "yarn prettier:fix",
-      "yarn lint"
-    ]
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "npm prettier:fix",
+      "npm lint"
+    ],
+    "*.{js,css,md}": "prettier --write"
   }
 }

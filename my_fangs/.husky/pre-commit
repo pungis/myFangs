@@ -1,4 +1,6 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# !/bin/sh
 
+echo $(dirname "$0")
+. "$(dirname "$0")/_/husky.sh"
+cd ./my_fangs
 npm lint-staged
