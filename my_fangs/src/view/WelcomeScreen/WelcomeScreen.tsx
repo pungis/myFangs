@@ -18,7 +18,6 @@ const WelcomeScreen = (props: any) => {
       <StyledWelcomeScreenHeader>
         <StyledWelcomeScreenLogo src={logo} alt='logo' />
         <h1>My Fangs</h1>
-
         <p>tarantulas dairy</p>
         <StyledLink to='/dashboard'>Dashboard</StyledLink>
       </StyledWelcomeScreenHeader>
